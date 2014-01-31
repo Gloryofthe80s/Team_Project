@@ -18,6 +18,8 @@ function TaskObject(propertyObject) {
 
 var taskArray = [];
 
+
+
 // ------ EVENT HANDLING ------
 // bring up task creation dialog box
 $('.compose-btn').click(function() {
@@ -50,6 +52,14 @@ $('.compose-btn').click(function() {
     });
 });
 
+// task buttons
+$('.complete-task-btn').click(function() {
+     // mark task as completed (maybe shadow over and move to bottom of list?
+});
+
+$('.delete-task-btn').click(function() {
+    //pop up box are you sure you want to delete this task?
+});
 
 
 
