@@ -15,9 +15,6 @@ function TaskObject(propertyObject) {
     this.dueDate = propertyObject.dueDate;
     this.notes = propertyObject.notes;
     this.complete = false;
-    this.completed = function(){
-        this.complete = true;
-    };
 };
 
 var taskArray = [];
@@ -30,50 +27,46 @@ $('.compose-btn').click(function() {
 
 
   // if cancel is clicked
-    $('.cancel-btn').click(function() {
-        $('.shadow-toggle').removeClass('active');
-        $('.compose-box').remove();
+  $('.cancel-btn').click(function() {
+    $('.shadow-toggle').removeClass('active');
+    $('.compose-box').remove();
+    });
 
-        _.each(taskArray, function(task, index) {
+ // create new task
+  $('.submit-btn').click(function() {
+    $('.shadow-toggle').removeClass('active');
+
+      var input = {
+        task: $('#task-input').val(),
+        dueDate: $('#due-date-input').val(),
+        notes: $('#notes-input').val()
+      };
+
+      taskArray.push(new TaskObject(input));
+
+      $('.compose-box').remove();
+       
+      _.each(taskArray, function(task, index) {
             if (taskArray[index] == taskArray[taskArray.length - 1]) {
                 $('.container').append(taskTemplate(task));
             } else {
                 console.log('not the last index! skipping!');
             };
-        });
+      });    
+
+      $('.complete-btn').click(function(){
+        $(this).parent().toggleClass('completed');
+      });
+
+      $('.delete-btn').click(function(){
+       $(this).parent().remove();
+      });
+
+     
     });
-
-  // create new task
-  $('.submit-btn').click(function() {
-  $('.shadow-toggle').removeClass('active');
-
-  var input = {
-    task: $('.task-input').val(),
-    dueDate: $('.due-date-input').val(),
-    notes: $('.notes-input').val()
-  };
-
-  taskArray.push(new TaskObject(input));
-
-  $('.compose-box').remove();
-
-  _.each(taskArray, function(task, index) {
-    $('.container').append(taskTemplate(task));
-  });
-  
-  $('.complete-btn').click(function(){
-    $(this).parent('.printed-task-container').toggleClass('completed');
   });
 
-  $('.delete-btn').click(function(){
-    $(this).parent('.printed-task-container').remove();
-  })
-
-  $('.more-btn').click(function(){
-    $(this).parent('.printed-task-container').toggleClass('more')
-  })
-});
-});
+ 
 
 
 
