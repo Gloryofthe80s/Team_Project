@@ -16,8 +16,7 @@ function TaskObject(propertyObject) {
     this.notes = propertyObject.notes;
 };
 
-var taskArray = []
-
+var taskArray = [];
 
 
 
@@ -43,13 +42,41 @@ $('.compose-btn').click(function() {
             notes: $('.notes-input').val()
         };
 
-    taskArray.push(new TaskObject(input));
+        taskArray.push(new TaskObject(input));
 
-    $('.compose-box').remove();
+        $('.compose-box').remove();
 
-    _.each(taskArray, function(task, index) {
-        $('.container').append(taskTemplate(task));
-    });
+        _.each(taskArray, function(task, index) {
+            $('.container').append(taskTemplate(task));
+        });
     });
 });
+
+// task buttons
+$('.complete-task-btn').click(function() {
+     // mark task as completed (maybe shadow over and move to bottom of list?
+});
+
+$('.delete-task-btn').click(function() {
+    //pop up box are you sure you want to delete this task?
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
