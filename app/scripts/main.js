@@ -45,7 +45,11 @@ $('.compose-btn').click(function() {
         $('.compose-box').remove();
 
         _.each(taskArray, function(task, index) {
-            $('.container').append(taskTemplate(task));
+            if (taskArray[index] == taskArray[taskArray.length - 1]) {
+                $('.container').append(taskTemplate(task));
+            } else {
+                console.log('not the last index! skipping!');
+            };
         });
     });
 });
