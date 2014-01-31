@@ -9,11 +9,21 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
     padding: 0.2em 0;
 }
 
+/* Colors */
+$black-color: rgb(46, 46, 46);
+$lightblue-color: rgb(191, 240, 230);
+$white-color: rgb(224, 240, 231);
+$white-color-dark: rgb(210, 240, 231);
+$grey-color: rgb(138, 125, 134);
+$lightgreen-color: rgb(111, 186, 174);
 /* Space out content a bit */
 body {
     margin: 0;
     padding: 0;
+    vertical-align: top;
+    background-color: $white-color;
 }
+
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -25,16 +35,42 @@ body {
 
 /* Custom page header */
 .header {
-    border-bottom: 1px solid #e5e5e5;
+    height: 60px;
+    width: 100%;
+    background-color: $black-color;
+    display: inline-block;
+}
 
-    /* Make the masthead heading the same height as the navigation */
-    h3 {
-        margin-top: 0;
-        margin-bottom: 0;
-        line-height: 40px;
-        padding-bottom: 19px;
+.headercontainer {
+    width: 700px;
+    margin: 0 auto;
+    img {
+       margin-top: 11px;
     }
 }
+
+.makenewcontainer {
+    height: 60px;
+    width: 700px;
+    display: block;
+    margin-top: 20px;
+    padding-right: 25px;
+    margin-left: -15px;
+    padding-top: 36px;
+}
+
+.texts {
+    width: 230px;
+    margin: -25px 326px;
+    font-size: 20px;
+    color: white;
+    position: relative;
+}
+
+.insidebuttoncontainer {
+    margin-top: -22px;
+}
+
 
 /* Custom page footer */
 .footer {
@@ -70,21 +106,19 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
-        max-width: 730px;
+        position: relative;
+        min-height: 320px;
+        max-width: 700px;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        background-color: $lightgreen-color;
     }
 
     /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
+
 
     /* Space out the masthead */
-    .header {
-        margin-bottom: 30px;
-    }
+   
 
     /* Remove the bottom border on the jumbotron for visual effect */
     .jumbotron {
@@ -113,7 +147,7 @@ body {
     width: 500px;
     height: 300px;
     border-radius: 10px;
-    background-color: lightblue;
+    background-color: $white-color;
     top: 50%;
     left: 50%;
     margin-top: -210px;
@@ -168,9 +202,9 @@ body {
 }
 
 .printed-task-container {
-  width: 680px;
+  width: 650px;
   padding: 25px;
-  background-color: gray;
+  background-color: $white-color;
   margin: 10px;
   border-radius: 10px;
 
@@ -178,6 +212,26 @@ body {
     background-color: red;
   }
 }
+
+.footercontainer {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+.compose-btn {
+    background-color: $white-color;
+    border-color: $white-color;
+    margin-top: -21px;
+    margin-right: 25px;
+    color: $black-color;
+    position: absolute;
+    right: 0;
+    &:hover {
+        background-color: $white-color-dark;
+        color: $black-color;
+    }
+}
+
 
 
 
