@@ -173,6 +173,10 @@ body {
   background-color: gray;
   margin: 10px;
   border-radius: 10px;
+
+  &.completed{
+    background-color: red;
+  }
 }
 
 
