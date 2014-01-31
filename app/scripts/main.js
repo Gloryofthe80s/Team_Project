@@ -14,6 +14,7 @@ function TaskObject(propertyObject) {
     this.task = propertyObject.task || 'no task selected';
     this.dueDate = propertyObject.dueDate;
     this.notes = propertyObject.notes;
+    this.complete = false;
 };
 
 var taskArray = [];
@@ -21,50 +22,57 @@ var taskArray = [];
 // ------ EVENT HANDLING ------
 // bring up task creation dialog box
 $('.compose-btn').click(function() {
-    $('.shadow-toggle').addClass('active');
-    $('body').append(modalTemplate());
+  $('.shadow-toggle').addClass('active');
+  $('body').append(modalTemplate());
 
-    // if cancel is clicked
-    $('.cancel-btn').click(function() {
-        $('.shadow-toggle').removeClass('active');
-        $('.compose-box').remove();
+
+  // if cancel is clicked
+  $('.cancel-btn').click(function() {
+    $('.shadow-toggle').removeClass('active');
+    $('.compose-box').remove();
     });
 
-    // create new task
-    $('.submit-btn').click(function() {
-        $('.shadow-toggle').removeClass('active');
-
+<<<<<<< HEAD
         var input = {
             task: $('#task-input').val(),
             dueDate: $('#due-date-input').val(),
             notes: $('#notes-input').val()
         };
+=======
+ // create new task
+  $('.submit-btn').click(function() {
+    $('.shadow-toggle').removeClass('active');
+>>>>>>> d088846fab3a05b965713fd5d75dbef47f2d12cf
 
-        taskArray.push(new TaskObject(input));
+      var input = {
+        task: $('#task-input').val(),
+        dueDate: $('#due-date-input').val(),
+        notes: $('#notes-input').val()
+      };
 
-        $('.compose-box').remove();
+      taskArray.push(new TaskObject(input));
 
-        _.each(taskArray, function(task, index) {
+      $('.compose-box').remove();
+       
+      _.each(taskArray, function(task, index) {
             if (taskArray[index] == taskArray[taskArray.length - 1]) {
                 $('.container').append(taskTemplate(task));
             };
-        });
+      });    
+
+      $('.complete-btn').click(function(){
+        $(this).parent().toggleClass('completed');
+      });
+
+      $('.delete-btn').click(function(){
+       $(this).parent().remove();
+      });
+
+     
     });
-});
+  });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
