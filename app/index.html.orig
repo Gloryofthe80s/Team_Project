@@ -25,17 +25,16 @@
         <![endif]-->
 
         <div class="shadow-toggle"></div>
-        <div class="header">
-            <div class="headercontainer">
-                <img class="logo" src="images/logo.png"/>
-            </div>
-        </div>
         <div class="container">
-            <div class="makenewcontainer">
-                <div class="texts">To create a task simply</div>
-                <div class="insidebuttoncontainer">
+            <div class="header">
+                <ul class="nav nav-pills pull-right">
                     <p><a class="btn btn-lg btn-success compose-btn" href="#">Make New!</a></p>
-                </div>
+                </ul>
+                <h3 class="text-muted">Team_Project</h3>
+            </div>
+
+            <div class="row marketing">
+
             </div>
         </div>
 
@@ -64,15 +63,24 @@
         <script class="printedTask" type="text/template">
 
             <div class="printed-task-container">
+                <p class="task-name"> <%= task %> </p>
+                <input class="task-date" type="date">
+                <p class ="notes"> <%= notes %> </p>
+                <div class="complete-task-btn btn btn-success">Completed!</div>
+                <div class="delete-task-btn cancel-btn btn btn-danger">Delete Task</div>
+
                 <p class="task-name"> Task: <%= task %> </p>
                 <input class="task-date" type="date" label="Date: ">
                 <p class ="notes"> Notes: <%= notes %> </p>
                   <div class="btn btn-success">Completed!</div>
                   <div class="cancel-btn btn btn-danger">Delete Task</div>
+
             </div>
         </script>
 
-        
+        <div class="footer">
+          <p>This is the footer.</p>
+        </div>
 
 
         <!-- build:js scripts/vendor.js -->
