@@ -49,7 +49,7 @@
               <label for= "due-date-input">Due Date:</label>
               <input type="date" class="compose-input" id="due-date-input"/>
             </div>
-            <div class = "notes">
+            <div class = "notes">  
               <label for="notes-input">Notes:</label>
               <textarea class= "compose-input" id="notes-input" placeholder="Details here..."></textarea>
             </div>
@@ -64,10 +64,10 @@
 
             <div class="printed-task-container">
                 <p class="task-name"> Task: <%= task %> </p>
-                <input class="task-date" type="date" label="Date: ">
+                <p>Date: <input class="task-date" type="date"></p>
                 <p class ="notes"> Notes: <%= notes %> </p>
-                  <div class="btn btn-success">Completed!</div>
-                  <div class="cancel-btn btn btn-danger">Delete Task</div>
+                <div class="complete-btn btn btn-success">Completed!</div>
+                <div class="delete-btn cancel-btn btn btn-danger">Delete Task</div>
             </div>
         </script>
 
