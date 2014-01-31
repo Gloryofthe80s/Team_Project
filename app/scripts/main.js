@@ -35,9 +35,9 @@ $('.compose-btn').click(function() {
         $('.shadow-toggle').removeClass('active');
 
         var input = {
-            task: $('.task-input').val(),
-            dueDate: $('.due-date-input').val(),
-            notes: $('.notes-input').val()
+            task: $('#task-input').val(),
+            dueDate: $('#due-date-input').val(),
+            notes: $('#notes-input').val()
         };
 
         taskArray.push(new TaskObject(input));
@@ -47,8 +47,6 @@ $('.compose-btn').click(function() {
         _.each(taskArray, function(task, index) {
             if (taskArray[index] == taskArray[taskArray.length - 1]) {
                 $('.container').append(taskTemplate(task));
-            } else {
-                console.log('not the last index! skipping!');
             };
         });
     });

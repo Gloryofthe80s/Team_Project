@@ -43,7 +43,7 @@
             <div class="create-task-header">Create Task:</div>
             <div class= "task">
               <label for="task-input">Task:</label>
-              <input class="compose-input" id="task-input" type="tetx" placeholder="I need to..."/>
+              <input class="compose-input" id="task-input" type="text" placeholder="I need to..."/>
             </div>
             <div class= "due">
               <label for= "due-date-input">Due Date:</label>
@@ -61,10 +61,9 @@
         </script>
 
         <script class="printedTask" type="text/template">
-
             <div class="printed-task-container">
                 <p class="task-name"> Task: <%= task %> </p>
-                <input class="task-date" type="date" label="Date: ">
+                <input class="task-date" type="date" label="Date: " placeholder="<%= dueDate %>">
                 <p class ="notes"> Notes: <%= notes %> </p>
                   <div class="btn btn-success">Completed!</div>
                   <div class="cancel-btn btn btn-danger">Delete Task</div>
