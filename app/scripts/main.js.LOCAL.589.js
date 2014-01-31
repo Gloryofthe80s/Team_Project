@@ -18,6 +18,8 @@ function TaskObject(propertyObject) {
 
 var taskArray = [];
 
+
+
 // ------ EVENT HANDLING ------
 // bring up task creation dialog box
 $('.compose-btn').click(function() {
