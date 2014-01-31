@@ -33,6 +33,14 @@ $('.compose-btn').click(function() {
     $('.cancel-btn').click(function() {
         $('.shadow-toggle').removeClass('active');
         $('.compose-box').remove();
+
+        _.each(taskArray, function(task, index) {
+            if (taskArray[index] == taskArray[taskArray.length - 1]) {
+                $('.container').append(taskTemplate(task));
+            } else {
+                console.log('not the last index! skipping!');
+            };
+        });
     });
 
   // create new task
