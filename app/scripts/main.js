@@ -28,7 +28,13 @@ $('.compose-btn').click(function() {
   $('.shadow-toggle').addClass('active');
   $('body').append(modalTemplate());
 
-<<<<<<< HEAD
+
+  // if cancel is clicked
+    $('.cancel-btn').click(function() {
+        $('.shadow-toggle').removeClass('active');
+        $('.compose-box').remove();
+    });
+
   // create new task
   $('.submit-btn').click(function() {
   $('.shadow-toggle').removeClass('active');
@@ -44,49 +50,21 @@ $('.compose-btn').click(function() {
   $('.compose-box').remove();
 
   _.each(taskArray, function(task, index) {
-  $('.container').append(taskTemplate(task));
+    $('.container').append(taskTemplate(task));
   });
   
+  $('.complete-btn').click(function(){
+    $(this).parent('.printed-task-container').toggleClass('completed');
+  });
 
-$('.complete').click(function(){
-  $(this).parent('.printed-task-container').toggleClass('completed');
+  $('.delete-btn').click(function(){
+    $(this).parent('.printed-task-container').remove();
+  })
+
+  $('.more-btn').click(function(){
+    $(this).parent('.printed-task-container').toggleClass('more')
+  })
 });
-
-
-
-});
-});
-
-
-
-
-
-
-=======
-    // if cancel is clicked
-    $('.cancel-btn').click(function() {
-        $('.shadow-toggle').removeClass('active');
-        $('.compose-box').remove();
-    });
-
-    // create new task
-    $('.submit-btn').click(function() {
-        $('.shadow-toggle').removeClass('active');
-
-        var input = {
-            task: $('.task-input').val(),
-            dueDate: $('.due-date-input').val(),
-            notes: $('.notes-input').val()
-        };
-
-        taskArray.push(new TaskObject(input));
-
-        $('.compose-box').remove();
-
-        _.each(taskArray, function(task, index) {
-            $('.container').append(taskTemplate(task));
-        });
-    });
 });
 
 
@@ -94,19 +72,4 @@ $('.complete').click(function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 728cc58b2cbbf28b8aef70dc5ce8e0751a8c202e
 
