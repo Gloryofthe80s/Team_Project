@@ -14,6 +14,12 @@ body {
     margin: 0;
     padding: 0;
 }
+/* Colors */
+$black-color: rgb(46, 46, 46);
+$lightblue-color: rgb(191, 240, 230);
+$white-color: rgb(224, 240, 231);
+$grey-color: rgb(138, 125, 139);
+$lightgreen-color: rgb(111, 186, 174);
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -113,7 +119,7 @@ body {
     width: 500px;
     height: 300px;
     border-radius: 10px;
-    background-color: lightblue;
+    background-color: $lightblue-color;
     top: 50%;
     left: 50%;
     margin-top: -210px;
