@@ -44,7 +44,7 @@ $('.compose-btn').click(function() {
     _.each(taskArray, function(task, index) {
     $('.container').append(taskTemplate(task));
     });
-
+    _.last(taskArray);
 
     });
 });
