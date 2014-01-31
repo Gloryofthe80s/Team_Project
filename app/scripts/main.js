@@ -16,7 +16,7 @@ function TaskObject(propertyObject) {
     this.notes = propertyObject.notes;
 };
 
-var taskArray = []
+var taskArray = [];
 
 
 

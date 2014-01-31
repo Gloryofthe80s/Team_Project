@@ -109,48 +109,71 @@ body {
 
 .compose-box {
     position: fixed;
-    display: inline-block;
     z-index: 10;
     width: 500px;
     height: 300px;
     border-radius: 10px;
-    background-color: blue;
+    background-color: lightblue;
     top: 50%;
     left: 50%;
     margin-top: -210px;
     margin-left: -250px;
-    padding: 20px;
+    padding: 0px 0 10px 20px;
+    box-shadow: 1px 1px 4px;
+}
+
+.create-task-header{
+  width: 121px;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  border-bottom: 1px solid black;
 }
 
 .compose-input {
-
+  width: 350px;
+  font-size: 16px;
+  height: 30px;
+  display: inline;
 }
 
-.submit-btn {
-
+.task label{
+  margin: 15px 35px 15px 0
 }
 
-.cancel-btn {
+.due label{
+  margin: 0 7px 15px 0;
+}
 
+.notes label{
+  margin-right: 28px;
+}
+
+#notes-input{
+  width: 350px;
+  height: 125px;
+}
+
+.btns{
+  float: right;
+  margin-top: 8px;
+}
+
+.btns .submit-btn{
+  margin-right: 20px
+}
+
+.btns .cancel-btn{
+  margin-right: 25px;
 }
 
 .printed-task-container {
-    width: 680px;
-    padding: 25px;
-    background-color: gray;
-    margin: 10px;
-    border-radius: 10px;
+  width: 680px;
+  padding: 25px;
+  background-color: gray;
+  margin: 10px;
+  border-radius: 10px;
 }
 
-.task-name {
-
-}
-
-.task-date {
-
-}
-.notes {
-
-}
 
 
