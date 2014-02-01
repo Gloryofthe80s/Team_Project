@@ -3,6 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,7 +64,7 @@
 
         <script class="printedTask" type="text/template">
             <div class="printed-task-container">
-                <p class="task-name"> Task: <%= task %> </p>
+                <p class="task-name"> Task: <span><%= task %><span></p>
                 <p>Date: <input class="task-date" type="date"></p>
                 <p class ="notes"> Notes: <%= notes %> </p>
                 <button class="complete-btn btn btn-success" id="complete-btns">Completed!</button>
