@@ -26,25 +26,37 @@ $('.compose-btn').click(function() {
   $('.shadow-toggle').addClass('active');
   $('body').append(modalTemplate());
 
+    // set default date to today
+    var date = new Date();
+
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
+
+    if (month < 10) month = "0" + month;
+    if (day < 10) day = "0" + day;
+
+    var today = year + "-" + month + "-" + day;
+    $('#due-date-input').val(today);
 
   // if cancel is clicked
-  $('.cancel-btn').click(function() {
-    $('.shadow-toggle').removeClass('active');
-    $('.compose-box').remove();
+    $('.cancel-btn').click(function() {
+        $('.shadow-toggle').removeClass('active');
+        $('.compose-box').remove();
     });
 
  // create new task
-  $('.submit-btn').click(function() {
-    $('.shadow-toggle').removeClass('active');
+    $('.submit-btn').click(function() {
+        $('.shadow-toggle').removeClass('active');
 
-      var input = {
-        task: $('#task-input').val(),
-        dueDate: $('#due-date-input').val(),
-        notes: $('#notes-input').val()
-      };
+        var input = {
+            task: $('#task-input').val(),
+            dueDate: $('#due-date-input').val(),
+            notes: $('#notes-input').val()
+        };
 
-      //var task = new TaskObject(input);
-      taskArray.push(new TaskObject(input));
+    //var task = new TaskObject(input);
+    taskArray.push(new TaskObject(input));
 
       // sort the array here (optional)
 
@@ -57,7 +69,7 @@ $('.compose-btn').click(function() {
             $('#tasks').append(taskTemplate(task));
       });
     });
-  });
+});
 
 $('#tasks').on('click', '.complete-btn', function() {
     $(this).parent().toggleClass('completed');
