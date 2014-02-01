@@ -53,18 +53,18 @@ $('.compose-btn').click(function() {
                 console.log('not the last index! skipping!');
             };
       });    
-
-       $('.complete-btn').click(function(){
-         $(this).parent('.printed-task-container').addClass('completed');
-       });
-
-      $('.delete-btn').click(function(){
-       $(this).parent('.printed-task-container').remove();
-      });
-
-     
     });
+
+   $('.complete-btn').click(function(){
+     $(this).parent('.printed-task-container').toggleClass('completed');
+   });
+
+  $('.delete-btn').click(function(){
+   $(this).parent('.printed-task-container').remove();
   });
+});
+     
+    
 
  
 

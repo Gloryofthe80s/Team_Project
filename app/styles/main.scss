@@ -148,7 +148,7 @@ body {
   position: fixed;
   z-index: 10;
   width: 500px;
-  height: 300px;
+  height: 310px;
   border-radius: 10px;
   background-color: $white-color;
   top: 50%;
@@ -168,15 +168,16 @@ body {
   border-radius: 8px 8px 0 0;
   height: 35px;
   line-height: 35px;
-  background: rgb(186,209,201);
-    background: -moz-linear-gradient(top,  rgb(186,209,201) 0%, rgb(130,182,172) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(186,209,201)), color-stop(100%,rgb(130,182,172)));
-    background: -webkit-linear-gradient(top,  rgb(186,209,201) 0%,rgb(130,182,172) 100%);
-    background: -o-linear-gradient(top,  rgb(186,209,201) 0%,rgb(130,182,172) 100%);
-    background: -ms-linear-gradient(top,  rgb(186,209,201) 0%,rgb(130,182,172) 100%);
-    background: linear-gradient(to bottom,  rgb(186,209,201) 0%,rgb(130,182,172) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bad1c9', endColorstr='#82b6ac',GradientType=0 );
-}
+  color: $white-color;
+  background: rgb(80,108,136);
+    background: -moz-linear-gradient(top,  rgb(80,108,136) 0%, rgb(41,57,82) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(80,108,136)), color-stop(100%,rgb(41,57,82)));
+    background: -webkit-linear-gradient(top,  rgb(80,108,136) 0%,rgb(41,57,82) 100%);
+    background: -o-linear-gradient(top,  rgb(80,108,136) 0%,rgb(41,57,82) 100%);
+    background: -ms-linear-gradient(top,  rgb(80,108,136) 0%,rgb(41,57,82) 100%);
+    background: linear-gradient(to bottom,  rgb(80,108,136) 0%,rgb(41,57,82) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#506c88', endColorstr='#293952',GradientType=0 );
+  }
 
 .compose-input {
   width: 350px;
@@ -186,15 +187,15 @@ body {
 }
 
 .task label{
-  margin: 15px 35px 15px 0
+  margin: 15px 45px 15px 0
 }
 
 .due label{
-  margin: 0 7px 15px 0;
+  margin: 0 10px 15px 0;
 }
 
 .notes label{
-  margin-right: 28px;
+  margin-right: 35px;
 }
 
 #notes-input{
@@ -205,7 +206,7 @@ body {
 
 .btns{
   float: right;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .btns .submit-btn{
@@ -216,6 +217,7 @@ body {
 
 .btns .cancel-btn{
   margin-right: 25px;
+  width: 100px;
 }
 
 .printed-task-container {
