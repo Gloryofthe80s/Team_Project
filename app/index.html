@@ -28,19 +28,18 @@
 
         <div class="shadow-toggle"></div>
         <div class="header">
-            <div class="headercontainer">
-                <img class="logo" src="images/logo.png"/>
-            </div>
+          <div class="headercontainer">
+            <img class="logo" src="images/logo.png"/>
+          </div>
         </div>
         <div class="container">
-            <div class="makenewcontainer">
-                <div class="texts">To create a task simply</div>
-                <div class="insidebuttoncontainer">
-                    <p><a class="btn btn-lg btn-success compose-btn" href="#">Make New!</a></p>
-                </div>
+          <div class="makenewcontainer">
+            <div class="texts">To create a task simply</div>
+            <div class="insidebuttoncontainer">
+              <p><a class="btn btn-lg btn-success compose-btn" href="#">Make New!</a></p>
             </div>
-            <div id="tasks">
-            </div>
+          </div>
+          <div id="tasks"></div>
         </div>
 
         <script class="composeTemplate" type="text/template">
@@ -70,8 +69,8 @@
                 <p class="task-name"> Task: <%= task %> </p>
                 <p>Date: <input class="task-date" type="date" value="<%= dueDate %>"></p>
                 <p class ="notes"> Notes: <%= notes %> </p>
-                <div class="complete-btn btn btn-success">Completed!</div>
-                <div class="delete-btn cancel-btn btn btn-danger">Delete Task</div>
+                <button class="complete-btn btn btn-success" id="complete-btns">Completed!</button>
+                <button class="delete-btn cancel-btn btn btn-danger">Delete Task</button>
             </div>
         </script>
 
