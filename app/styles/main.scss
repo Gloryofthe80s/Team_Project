@@ -175,7 +175,8 @@ body {
   border-radius: 10px;
 
   &.completed{
-    background-color: red;
+    background-color: gray;
+    background-image: url('images/checkmark.png');
   }
 }
 
