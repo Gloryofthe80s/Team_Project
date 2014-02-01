@@ -54,12 +54,12 @@ $('.compose-btn').click(function() {
             };
       });    
 
-      $('.complete-btn').click(function(){
-        $(this).parent().toggleClass('completed');
-      });
+       $('.complete-btn').click(function(){
+         $(this).parent('.printed-task-container').addClass('completed');
+       });
 
       $('.delete-btn').click(function(){
-       $(this).parent().remove();
+       $(this).parent('.printed-task-container').remove();
       });
 
      
