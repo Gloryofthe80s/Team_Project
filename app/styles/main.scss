@@ -222,19 +222,55 @@ body {
 
 .printed-task-container {
   width: 650px;
-  padding: 25px;
+  height: 100px;
+  padding: 10px 25px;
   background-color: $white-color;
   margin: 10px;
   border-radius: 10px;
 
   &.completed {
     background-color: $grey-color;
+    background-image: url('images/checkmark.png');
   }
 }
 
-.task-name span {
-  font-size: 20px;
-  }
+.side-right,
+.side-left {
+  display: inline-block;
+}
+
+.side-left{
+  width: 345px;
+  position: relative;
+  overflow: hidden;
+}
+
+.task-name p,
+.task-date p,
+.notes p {
+  margin: 0;
+  font-size: 18px;
+  display: inline;
+}
+
+.task-name{
+  margin-bottom: 15px
+}
+
+.printed-task-container span,
+.notes p:nth-child(2){
+  font-size: 14px;
+}
+
+.task-btns{
+  margin: 15px 0 10px 30px;
+}
+
+.complete-btn{
+  margin-right: 10px;
+}
+
+
 
 .footercontainer {
   max-width: 700px;
