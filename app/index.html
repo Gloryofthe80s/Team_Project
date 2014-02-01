@@ -38,6 +38,8 @@
                     <p><a class="btn btn-lg btn-success compose-btn" href="#">Make New!</a></p>
                 </div>
             </div>
+            <div id="tasks">
+            </div>
         </div>
 
         <script class="composeTemplate" type="text/template">
@@ -45,13 +47,13 @@
             <div class="create-task-header">Create Task:</div>
             <div class= "task">
               <label for="task-input">Task:</label>
-              <input class="compose-input" id="task-input" type="tetx" placeholder="I need to..."/>
+              <input class="compose-input" id="task-input" type="text" placeholder="I need to..."/>
             </div>
             <div class= "due">
               <label for= "due-date-input">Due Date:</label>
               <input type="date" class="compose-input" id="due-date-input"/>
             </div>
-            <div class = "notes">  
+            <div class = "notes">
               <label for="notes-input">Notes:</label>
               <textarea class= "compose-input" id="notes-input" placeholder="Details here..."></textarea>
             </div>
@@ -63,18 +65,14 @@
         </script>
 
         <script class="printedTask" type="text/template">
-
             <div class="printed-task-container">
-                <p class="task-name"> Task: <span><%= task %><span></p>
-                <p>Date: <input class="task-date" type="date"></p>
+                <p class="task-name"> Task: <%= task %> </p>
+                <p>Date: <input class="task-date" type="date" value="<%= dueDate %>"></p>
                 <p class ="notes"> Notes: <%= notes %> </p>
                 <div class="complete-btn btn btn-success">Completed!</div>
                 <div class="delete-btn cancel-btn btn btn-danger">Delete Task</div>
             </div>
         </script>
-
-        
-
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->

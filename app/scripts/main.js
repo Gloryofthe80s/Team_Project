@@ -20,6 +20,7 @@ function TaskObject(propertyObject) {
 var taskArray = [];
 
 // ------ EVENT HANDLING ------
+
 // bring up task creation dialog box
 $('.compose-btn').click(function() {
   $('.shadow-toggle').addClass('active');
@@ -42,31 +43,30 @@ $('.compose-btn').click(function() {
         notes: $('#notes-input').val()
       };
 
+      //var task = new TaskObject(input);
       taskArray.push(new TaskObject(input));
 
+      // sort the array here (optional)
+
       $('.compose-box').remove();
-       
+
+      // re-add all tasks (so that they're sorted, if sort is implemented)
+      $('#tasks').html('');
+
       _.each(taskArray, function(task, index) {
-            if (taskArray[index] == taskArray[taskArray.length - 1]) {
-                $('.container').append(taskTemplate(task));
-            } else {
-                console.log('not the last index! skipping!');
-            };
-      });    
-
-      $('.complete-btn').click(function(){
-        $(this).parent().toggleClass('completed');
+            $('#tasks').append(taskTemplate(task));
       });
-
-      $('.delete-btn').click(function(){
-       $(this).parent().remove();
-      });
-
-     
     });
   });
 
- 
+$('#tasks').on('click', '.complete-btn', function() {
+    $(this).parent().toggleClass('completed');
+});
+
+$('#tasks').on('click', '.delete-btn', function() {
+    $(this).parent().remove();
+});
+
 
 
 
