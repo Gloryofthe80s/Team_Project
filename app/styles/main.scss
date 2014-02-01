@@ -10,18 +10,21 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 }
 
 /* Colors */
-$black-color: rgb(46, 46, 46);
+$light-blue-color: rgb(19, 170, 225);
+$light-blue-color-light: rgba(19, 170, 225, .75);
+$black-color: rgb(39, 55, 83);
 $lightblue-color: rgb(191, 240, 230);
-$white-color: rgb(224, 240, 231);
-$white-color-dark: rgb(210, 240, 231);
-$grey-color: rgb(138, 125, 134);
-$lightgreen-color: rgb(111, 186, 174);
+$white-color: rgb(246, 249, 252);
+$white-color-dark: rgb(250, 249, 252);
+$grey-color: rgb(206, 207, 202);
+$lightgreen-color: rgb(74, 107, 138);
 /* Space out content a bit */
 body {
     margin: 0;
     padding: 0;
     vertical-align: top;
     background-color: $white-color;
+    font-family: 'Lato', sans-serif;
 }
 
 
@@ -46,6 +49,7 @@ body {
     margin: 0 auto;
     img {
        margin-top: 11px;
+       margin-left: 25px;
     }
 }
 
@@ -118,7 +122,7 @@ body {
 
 
     /* Space out the masthead */
-   
+
 
     /* Remove the bottom border on the jumbotron for visual effect */
     .jumbotron {
@@ -194,7 +198,9 @@ body {
 }
 
 .btns .submit-btn{
-  margin-right: 20px
+  margin-right: 20px;
+  background-color: $light-blue-color;
+  color: white;
 }
 
 .btns .cancel-btn{
@@ -208,10 +214,14 @@ body {
   margin: 10px;
   border-radius: 10px;
 
-  &.completed{
-    background-color: red;
+  &.completed {
+    background-color: $grey-color;
   }
 }
+
+.task-name span {
+    font-size: 20px;
+  }
 
 .footercontainer {
         max-width: 700px;
@@ -227,11 +237,20 @@ body {
     position: absolute;
     right: 0;
     &:hover {
+        border-color: $light-blue-color;
         background-color: $white-color-dark;
         color: $black-color;
     }
 }
 
+.complete-btn {
+    background-color: $light-blue-color-light;
+    border-color: $light-blue-color;
+    &:hover {
+        border-color: $light-blue-color-light;
+        background-color: $light-blue-color;
+    }
+}
 
 
 
