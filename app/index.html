@@ -3,6 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -50,7 +51,7 @@
               <label for= "due-date-input">Due Date:</label>
               <input type="date" class="compose-input" id="due-date-input"/>
             </div>
-            <div class = "notes">
+            <div class = "notes">  
               <label for="notes-input">Notes:</label>
               <textarea class= "compose-input" id="notes-input" placeholder="Details here..."></textarea>
             </div>
@@ -64,11 +65,11 @@
         <script class="printedTask" type="text/template">
 
             <div class="printed-task-container">
-                <p class="task-name"> Task: <%= task %> </p>
-                <input class="task-date" type="date" label="Date: ">
+                <p class="task-name"> Task: <span><%= task %><span></p>
+                <p>Date: <input class="task-date" type="date"></p>
                 <p class ="notes"> Notes: <%= notes %> </p>
-                  <div class="btn btn-success">Completed!</div>
-                  <div class="cancel-btn btn btn-danger">Delete Task</div>
+                <div class="complete-btn btn btn-success">Completed!</div>
+                <div class="delete-btn cancel-btn btn btn-danger">Delete Task</div>
             </div>
         </script>
 
