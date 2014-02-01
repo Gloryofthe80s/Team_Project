@@ -37,6 +37,8 @@
                     <p><a class="btn btn-lg btn-success compose-btn" href="#">Make New!</a></p>
                 </div>
             </div>
+            <div id="tasks">
+            </div>
         </div>
 
         <script class="composeTemplate" type="text/template">
@@ -64,7 +66,7 @@
         <script class="printedTask" type="text/template">
             <div class="printed-task-container">
                 <p class="task-name"> Task: <%= task %> </p>
-                <p>Date: <input class="task-date" type="date"></p>
+                <p>Date: <input class="task-date" type="date" value="<%= dueDate %>"></p>
                 <p class ="notes"> Notes: <%= notes %> </p>
                 <div class="complete-btn btn btn-success">Completed!</div>
                 <div class="delete-btn cancel-btn btn btn-danger">Delete Task</div>
