@@ -23,8 +23,9 @@ body {
   margin: 0;
   padding: 0;
   vertical-align: top;
-  background-color: $white-color;
+  background-color: #D0E4E1;;
   font-family: 'Lato', sans-serif;
+  padding-bottom: 80px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -110,7 +111,7 @@ body {
 @media screen and (min-width: 768px) {
   .container {
     position: relative;
-    min-height: 320px;
+    min-height: 95px;
     max-width: 700px;
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
@@ -148,7 +149,7 @@ body {
   position: fixed;
   z-index: 10;
   width: 500px;
-  height: 310px;
+  height: 320px;
   border-radius: 10px;
   background-color: $white-color;
   top: 50%;
@@ -184,6 +185,7 @@ body {
   font-size: 16px;
   height: 30px;
   display: inline;
+  margin-bottom: 10px;
 }
 
 .task label{
@@ -232,8 +234,8 @@ body {
   }
 }
 
-.task-name span {
-  font-size: 20px;
+.task-name {
+  font-size: 30px;
   }
 
 .footercontainer {
@@ -249,7 +251,7 @@ body {
   color: $black-color;
   position: absolute;
   right: 0;
-    
+
   &:hover {
     border-color: $light-blue-color;
     background-color: $white-color-dark;
@@ -266,5 +268,8 @@ body {
   }
 }
 
-
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
 
