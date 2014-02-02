@@ -77,6 +77,8 @@ $('.compose-btn').click(function() {
 
   $('#tasks').on('click', '.complete-btn', function() {
     $(this).closest('.printed-task-container').toggleClass('completed');
+     $(this).closest('.printed-task-container').find('.check').toggleClass('showup');
+        console.log('check');
   });
 
   $('#tasks').on('click', '.delete-btn', function() {
