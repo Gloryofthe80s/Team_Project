@@ -29,11 +29,8 @@ $('.compose-btn').click(function() {
   $('body').append(modalTemplate());
   $( "#task-input" ).focus();
 
-
-
     // set default date to today
     var date = new Date();
-
     var day = date.getDate();
     var month = date.getMonth() + 1;
     var year = date.getFullYear();
@@ -63,16 +60,16 @@ $('.compose-btn').click(function() {
     //var task = new TaskObject(input);
     taskArray.push(new TaskObject(input));
 
-      // sort the array here (optional)
+        // sort the array here (optional)
 
-      $('.compose-box').remove();
+        $('.compose-box').remove();
 
-      // re-add all tasks (so that they're sorted, if sort is implemented)
-      $('#tasks').html('');
+        // re-add all tasks (so that they're sorted, if sort is implemented)
+        $('#tasks').html('');
 
-      _.each(taskArray, function(task, index) {
-            $('#tasks').append(taskTemplate(task));
-      });
+        _.each(taskArray, function(task, index) {
+              $('#tasks').append(taskTemplate(task));
+        });
     });
 });
 
@@ -89,8 +86,6 @@ $('#tasks').on('click', '.delete-btn', function() {
         }
     });
 });
-
-
 
 
 
