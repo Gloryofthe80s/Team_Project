@@ -23,8 +23,10 @@ $lightgreen-color: rgb(74, 107, 138);
 body {
   margin: 0;
   padding: 0;
-  background-color: $white-color;
+  vertical-align: top;
+  background-color: #D0E4E1;
   font-family: 'Lato', sans-serif;
+  padding-bottom: 80px;
   color: rgb(34,56,83);
 }
 
@@ -122,7 +124,7 @@ body * {
 @media screen and (min-width: 768px) {
   .container {
     position: relative;
-    min-height: 320px;
+    min-height: 95px;
     max-width: 700px;
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
@@ -160,7 +162,7 @@ body * {
   position: fixed;
   z-index: 10;
   width: 500px;
-  height: 310px;
+  height: 340px;
   border-radius: 10px;
   background-color: $white-color;
   top: 50%;
@@ -196,6 +198,7 @@ body * {
   font-size: 16px;
   height: 30px;
   display: inline;
+  margin-bottom: 10px;
 }
 
 .task-inp{
@@ -258,7 +261,7 @@ body * {
 
   &.expand{
     height: 250px;
-  }  
+  }
 }
 
 .side-right,
@@ -288,7 +291,13 @@ margin-left: 50px;
   margin: 0;
 }
 
-.task-name,
+.task-name p span {
+  width: 285px;
+  overflow: hidden;
+  font-size: 30px;
+  line-height: 28px;
+}
+
 .printed-notes {
   width: 285px;
   overflow: hidden;
@@ -310,7 +319,6 @@ margin-left: 50px;
   }
 }
 
-.task-name p,
 .task-date p,
 .printed-notes p {
   margin: 0;
@@ -322,10 +330,11 @@ margin-left: 50px;
   display: inline;
 }
 
-.task-name p span,
 .printed-notes p:nth-child(2){
   font-size: 14px;
   line-height: 28px;
+  display: inline;
+  margin: 0;
 }
 
 .more-btn{
@@ -338,7 +347,7 @@ margin-left: 50px;
 
   &.drop-down{
     margin: 170px 0 0 -22px;
-  }  
+  }
 }
 
 .complete-btn{
@@ -358,7 +367,7 @@ margin-left: 50px;
   color: $black-color;
   position: absolute;
   right: 0;
-    
+
   &:hover {
     border-color: $light-blue-color;
     background-color: $light-blue-color-lighter;
@@ -375,5 +384,8 @@ margin-left: 50px;
   }
 }
 
-
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
 
