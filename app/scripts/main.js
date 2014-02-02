@@ -62,6 +62,7 @@ $('.compose-btn').click(function() {
 
         // sort the array here (optional)
 
+
         $('.compose-box').remove();
 
         // re-add all tasks (so that they're sorted, if sort is implemented)

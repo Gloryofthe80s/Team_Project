@@ -12,6 +12,7 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 /* Colors */
 $light-blue-color: rgb(19, 170, 225);
 $light-blue-color-light: rgba(19, 170, 225, .75);
+$light-blue-color-lighter: rgb(243, 247, 255);
 $black-color: rgb(39, 55, 83);
 $lightblue-color: rgb(191, 240, 230);
 $white-color: rgb(246, 249, 252);
@@ -211,8 +212,11 @@ body {
 
 .btns .submit-btn{
   margin-right: 20px;
-  background-color: $light-blue-color;
+  background-color: $light-blue-color-light;
   color: white;
+  &:hover {
+     background-color: $light-blue-color;
+  }
 }
 
 .btns .cancel-btn{
@@ -252,7 +256,7 @@ body {
     
   &:hover {
     border-color: $light-blue-color;
-    background-color: $white-color-dark;
+    background-color: $light-blue-color-lighter;
     color: $black-color;
   }
 }
