@@ -257,7 +257,6 @@ body * {
 
   &.completed {
     background-color: $grey-color;
-    background-image: url('images/checkmark.png');
   }
 
   &.expand{
@@ -344,10 +343,14 @@ margin-left: 50px;
 }
 
 .task-btns {
-  margin: 45px 0 0 -22px;
+    position: absolute;
+    right: 0;
+    margin-top: 41px;
+    margin-right: 37px;
 
   &.drop-down{
-    margin: 170px 0 0 -22px;
+    margin-top: 166px;
+    margin-right: 37px;
   }
 }
 
@@ -388,5 +391,20 @@ margin-left: 50px;
 input[type=date]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     display: none;
+}
+
+.check {
+    position: absolute;
+    right: 0;
+    margin-right: 38px;
+    margin-top: -30px;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    opacity: 0;
+
+    &.showup {
+        opacity: 1;
+    }
 }
 
