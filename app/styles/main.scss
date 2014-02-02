@@ -12,6 +12,7 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 /* Colors */
 $light-blue-color: rgb(19, 170, 225);
 $light-blue-color-light: rgba(19, 170, 225, .75);
+$light-blue-color-lighter: rgb(243, 247, 255);
 $black-color: rgb(39, 55, 83);
 $lightblue-color: rgb(191, 240, 230);
 $white-color: rgb(246, 249, 252);
@@ -230,6 +231,11 @@ body * {
 
 .btns .submit-btn{
   margin-right: 15px;
+  background-color: $light-blue-color-light;
+  color: white;
+  &:hover {
+     background-color: $light-blue-color;
+  }
 }
 
 .btns .cancel-btn{
@@ -283,12 +289,10 @@ margin-left: 50px;
   margin: 0;
 }
 
-.task-name p,
-.task-date p,
-.printed-notes p {
-  margin: 0;
-  font-size: 18px;
-  display: inline;
+.task-name,
+.printed-notes {
+  width: 285px;
+  overflow: hidden;
 }
 
 .task-name{
@@ -298,6 +302,21 @@ margin-left: 50px;
 
 .printed-notes{
   height: 60px;
+  padding-right: 10px;
+
+  &.more-notes{
+    overflow: scroll;
+    width: 285px;
+    height: 170px;
+  }
+}
+
+.task-name p,
+.task-date p,
+.printed-notes p {
+  margin: 0;
+  font-size: 18px;
+  display: inline;
 }
 
 .printed-notes p {
@@ -310,40 +329,22 @@ margin-left: 50px;
   line-height: 28px;
 }
 
-.task-name,
-.printed-notes {
-  width: 285px;
-  overflow: hidden;
-
-  &.more{
-    overflow: scroll;
-    width: 285px;
-    height: 170px;
-  }
-}
-
 .more-btn{
   height: 33px;
   width: 99px;
-
-  &.expanded{
-    margin: -10px 0 0 215px;
-  }
 }
 
 .task-btns {
   margin: 45px 0 0 -22px;
 
   &.drop-down{
-    margin: 170px 0 10px 30px;
+    margin: 170px 0 0 -22px;
   }  
 }
 
 .complete-btn{
   margin: 0 10px;
 }
-
-
 
 .footercontainer {
   max-width: 700px;
@@ -361,7 +362,7 @@ margin-left: 50px;
     
   &:hover {
     border-color: $light-blue-color;
-    background-color: $white-color-dark;
+    background-color: $light-blue-color-lighter;
     color: $black-color;
   }
 }
