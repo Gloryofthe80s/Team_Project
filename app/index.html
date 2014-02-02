@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +18,7 @@
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         <!-- endbuild -->
     </head>
     <body>
@@ -33,9 +34,11 @@
         </div>
         <div class="container">
           <div class="makenewcontainer">
-            <div class="texts">To create a task, simply</div>
+
+            <div class="texts">To create a task, simply: </div>
+
             <div class="insidebuttoncontainer">
-              <p><a class="btn btn-lg btn-success compose-btn" href="#">Make New!</a></p>
+              <p><a class="make-new btn btn-lg btn-success compose-btn" href="#">Make New!</a></p>
             </div>
           </div>
           <div id="tasks"></div>
@@ -44,7 +47,7 @@
         <script class="composeTemplate" type="text/template">
           <div class="compose-box">
             <div class="create-task-header">Create Task:</div>
-            <div class= "task">
+            <div class= "task-inp">
               <label for="task-input">Task:</label>
               <input class="compose-input" id="task-input" type="text" placeholder="I need to..."/>
             </div>
@@ -52,25 +55,42 @@
               <label for="notes-input">Notes:</label>
               <textarea class= "compose-input" id="notes-input" placeholder="Details here..."></textarea>
             </div>
-            <div class= "due">
+
+             <div class= "due">
+
               <label for= "due-date-input">Due Date:</label>
               <input type="date" class="compose-input" id="due-date-input"/>
             </div>
             <div class = "btns">
-              <div class="submit-btn btn btn-default">Create Task</div>
+              <div class="submit-btn btn btn-info">Create Task</div>
               <div class="cancel-btn btn btn-danger">Cancel</div>
             </div>
           </div>
         </script>
 
         <script class="printedTask" type="text/template">
-            <div class="printed-task-container" data-uniqueid= "<%= uniqueId %>">
-                <p class="task-name"> <%= task %> </p>
-                <p class ="notes"> <%= notes %> </p>
-                <p><input class="task-date" type="date" value="<%= dueDate %>"></p>
-                <button class="complete-btn btn btn-success" id="complete-btns">Completed!</button>
-                <button class="delete-btn cancel-btn btn btn-danger">Delete Task</button>
+          <div class="printed-task-container" data-uniqueid= "<%= uniqueId %>">
+            <div class="side-left">
+              <div class="task-name">
+                  <p>Task:  <span><%= task %></span></p>
+              </div>
+              <div class="printed-notes">
+                <p>Notes:  </p>
+                <p><%= notes %></p>
+              </div>
             </div>
+            <div class="side-right">
+              <div class="task-date">
+                <p>Due Date:  </p>
+                <input class="task-date" type="date" value="<%= dueDate %>">
+              </div>
+              <div class="task-btns">
+                <button class="more-btn btn btn-primary">More...</button>
+                <button class="complete-btn btn btn-info" id="complete-btns">Completed!</button>
+                <button class="delete-btn cancel-btn btn btn-danger">Delete Task</button>
+              </div>
+            </div>
+          </div>
         </script>
 
         <!-- build:js scripts/vendor.js -->
