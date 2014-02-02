@@ -15,6 +15,8 @@ function TaskObject(propertyObject) {
     this.dueDate = propertyObject.dueDate;
     this.notes = propertyObject.notes;
     this.complete = false;
+    this.uniqueId = _.uniqueId('task_')
+
 };
 
 var taskArray = [];
@@ -25,6 +27,9 @@ var taskArray = [];
 $('.compose-btn').click(function() {
   $('.shadow-toggle').addClass('active');
   $('body').append(modalTemplate());
+  $( "#task-input" ).focus();
+
+
 
     // set default date to today
     var date = new Date();
@@ -77,6 +82,12 @@ $('#tasks').on('click', '.complete-btn', function() {
 
 $('#tasks').on('click', '.delete-btn', function() {
     $(this).parent().remove();
+    var taskToBeDeleted = _.findWhere(taskArray, {uniqueId : $(this).parent().attr('data-uniqueid')});
+    _.each(taskArray, function(task, index) {
+        if (task.uniqueId == taskToBeDeleted.uniqueId) {
+            taskArray.splice(index, 1);
+        }
+    });
 });
 
 
