@@ -49,6 +49,7 @@ $(document).ready(function(){
 
         // sort the array here (optional)
 
+
         $('.compose-box').remove();
 
 
