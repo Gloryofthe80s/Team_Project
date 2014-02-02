@@ -146,7 +146,7 @@ body * {
 // ------ OUR STYLES ------
 
 .shadow-toggle {
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, .3);
   display: none;
   position: fixed;
   width: 100%;
@@ -158,6 +158,10 @@ body * {
   }
 }
 
+.make-new{
+  text-shadow: 1px 1px rgb(212,227,224);
+}
+
 .compose-box {
   position: fixed;
   z-index: 10;
@@ -167,7 +171,7 @@ body * {
   background-color: $white-color;
   top: 50%;
   left: 50%;
-  margin-top: -210px;
+  margin-top: -150px;
   margin-left: -250px;
   padding: 0px 0 10px 20px;
   box-shadow: 1px 1px 4px;
@@ -202,7 +206,7 @@ body * {
 }
 
 .task-inp{
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .task-inp label{
@@ -229,7 +233,7 @@ body * {
 
 .btns{
   float: right;
-  margin-top: 7px;
+  margin-top: 5px;
 }
 
 .btns .submit-btn{
@@ -279,37 +283,31 @@ body * {
 }
 
 .task-date{
-margin-top: 5px;
-margin-left: 50px;
+margin: 5px 0 0 70px;
 }
 
 .task-date p {
-  margin-right: 5px;
+  text-shadow: 1px 1px rgb(212,227,224)
 }
 
 .task-date input{
-  margin: 0;
+  margin: 0 0 0 5px;
 }
 
-.task-name p span {
+.task-name {
   width: 285px;
-  overflow: hidden;
+  height: 35px;
+  margin: 5px 0 15px 0;
+  overflow: scroll;
   font-size: 30px;
-  line-height: 28px;
+  line-height: 35px;
+  text-shadow: 1px 1px rgb(212,227,224);
 }
 
 .printed-notes {
   width: 285px;
   overflow: hidden;
-}
-
-.task-name{
-  height: 25px;
-  margin: 5px 0 15px 0;
-}
-
-.printed-notes{
-  height: 60px;
+  height: 50px;
   padding-right: 10px;
 
   &.more-notes{
