@@ -240,7 +240,7 @@ body * {
   margin-right: 15px;
   background-color: $light-blue-color-light;
   color: white;
-  &:hover {
+  & :hover {
      background-color: $light-blue-color;
   }
 }
@@ -260,7 +260,7 @@ body * {
   box-shadow: 1px 1px 2px;
 
   &.completed {
-    background: $grey-color url(/images/checkmark.png/);
+    background-color: $grey-color;
   }
 
   &.expand{
