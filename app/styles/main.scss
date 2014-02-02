@@ -23,9 +23,13 @@ $lightgreen-color: rgb(74, 107, 138);
 body {
   margin: 0;
   padding: 0;
-  vertical-align: top;
   background-color: $white-color;
   font-family: 'Lato', sans-serif;
+  color: rgb(34,56,83);
+}
+
+body * {
+  vertical-align: top;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -75,6 +79,13 @@ body {
   margin-top: -22px;
 }
 
+//Shadow on make new btn
+.texts {
+  text-shadow: 1px 2px 0px #334b7f;
+}
+.make-new {
+  box-shadow: 1px 1px 2px;
+}
 
 /* Custom page footer */
 .footer {
@@ -187,12 +198,20 @@ body {
   display: inline;
 }
 
-.task label{
-  margin: 15px 45px 15px 0
+.task-inp{
+  margin-top: 15px;
+}
+
+.task-inp label{
+  margin: 5px 45px 0 0;
 }
 
 .due label{
   margin: 0 10px 15px 0;
+}
+
+.notes{
+  margin: 10px 0;
 }
 
 .notes label{
@@ -207,11 +226,11 @@ body {
 
 .btns{
   float: right;
-  margin-top: 10px;
+  margin-top: 7px;
 }
 
 .btns .submit-btn{
-  margin-right: 20px;
+  margin-right: 15px;
   background-color: $light-blue-color-light;
   color: white;
   &:hover {
@@ -221,24 +240,111 @@ body {
 
 .btns .cancel-btn{
   margin-right: 25px;
-  width: 100px;
+  width: 99px;
 }
 
 .printed-task-container {
   width: 650px;
-  padding: 25px;
+  height: 125px;
+  padding: 10px 20px;
   background-color: $white-color;
   margin: 10px;
   border-radius: 10px;
+  box-shadow: 1px 1px 2px;
 
   &.completed {
     background-color: $grey-color;
+    background-image: url('images/checkmark.png');
+  }
+
+  &.expand{
+    height: 250px;
+  }  
+}
+
+.side-right,
+.side-left {
+  display: inline-block;
+}
+
+.side-left{
+  width: 300px;
+  position: relative;
+}
+
+.side-right{
+  width: 300px;
+}
+
+.task-date{
+margin-top: 5px;
+margin-left: 50px;
+}
+
+.task-date p {
+  margin-right: 5px;
+}
+
+.task-date input{
+  margin: 0;
+}
+
+.task-name,
+.printed-notes {
+  width: 285px;
+  overflow: hidden;
+}
+
+.task-name{
+  height: 25px;
+  margin: 5px 0 15px 0;
+}
+
+.printed-notes{
+  height: 60px;
+  padding-right: 10px;
+
+  &.more-notes{
+    overflow: scroll;
+    width: 285px;
+    height: 170px;
   }
 }
 
-.task-name span {
-  font-size: 20px;
-  }
+.task-name p,
+.task-date p,
+.printed-notes p {
+  margin: 0;
+  font-size: 18px;
+  display: inline;
+}
+
+.printed-notes p {
+  display: inline;
+}
+
+.task-name p span,
+.printed-notes p:nth-child(2){
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.more-btn{
+  height: 33px;
+  width: 99px;
+}
+
+.task-btns {
+  margin: 45px 0 0 -22px;
+
+  &.drop-down{
+    margin: 170px 0 0 -22px;
+  }  
+}
+
+.complete-btn{
+  margin: 0 10px;
+}
 
 .footercontainer {
   max-width: 700px;
