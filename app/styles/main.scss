@@ -253,8 +253,7 @@ body * {
   box-shadow: 1px 1px 2px;
 
   &.completed {
-    background-color: $grey-color;
-    background-image: url('images/checkmark.png');
+    background: $grey-color url(/images/checkmark.png/);
   }
 
   &.expand{
