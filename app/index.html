@@ -33,9 +33,9 @@
         </div>
         <div class="container">
           <div class="makenewcontainer">
-            <div class="texts">To create a task simply</div>
+            <div class="texts">To create a task simply: </div>
             <div class="insidebuttoncontainer">
-              <p><a class="btn btn-lg btn-success compose-btn" href="#">Make New!</a></p>
+              <p><a class="make-new btn btn-lg btn-success compose-btn" href="#">Make New!</a></p>
             </div>
           </div>
           <div id="tasks"></div>
@@ -44,20 +44,20 @@
         <script class="composeTemplate" type="text/template">
           <div class="compose-box">
             <div class="create-task-header">Create Task:</div>
-            <div class= "task">
+            <div class= "task-inp">
               <label for="task-input">Task:</label>
               <input class="compose-input" id="task-input" type="text" placeholder="I need to..."/>
-            </div>
-            <div class= "due">
-              <label for= "due-date-input">Due Date:</label>
-              <input type="date" class="compose-input" id="due-date-input"/>
             </div>
             <div class = "notes">
               <label for="notes-input">Notes:</label>
               <textarea class= "compose-input" id="notes-input" placeholder="Details here..."></textarea>
             </div>
+             <div class= "due">
+              <label for= "due-date-input">Due Date:</label>
+              <input type="date" class="compose-input" id="due-date-input"/>
+            </div>
             <div class = "btns">
-              <div class="submit-btn btn btn-default">Create Task</div>
+              <div class="submit-btn btn btn-info">Create Task</div>
               <div class="cancel-btn btn btn-danger">Cancel</div>
             </div>
           </div>
@@ -67,21 +67,21 @@
             <div class="printed-task-container">
               <div class="side-left">
                 <div class="task-name">
-                    <p>Task:</p> 
-                    <span><%= task %></span>
+                    <p>Task:  <span><%= task %></span></p> 
                 </div>  
-                <div class="notes">  
-                  <p> Notes: </p>
+                <div class="printed-notes">
+                  <p>Notes:  </p>
                   <p><%= notes %></p>
                 </div>
               </div>  
               <div class="side-right">
                 <div class="task-date">
-                  <p>Due Date:</p> 
+                  <p>Due Date:  </p> 
                   <input class="task-date" type="date" value="<%= dueDate %>">
                 </div>
                 <div class="task-btns">  
-                  <button class="complete-btn btn btn-success" id="complete-btns">Completed!</button>
+                  <button class="more-btn btn btn-primary">More...</button>
+                  <button class="complete-btn btn btn-info" id="complete-btns">Completed!</button>
                   <button class="delete-btn cancel-btn btn btn-danger">Delete Task</button>
                 </div> 
               </div> 

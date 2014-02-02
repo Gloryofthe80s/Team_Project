@@ -53,6 +53,7 @@ $(document).ready(function(){
 
 
         // re-add all tasks (so that they're sorted, if sort is implemented)
+        
         $('#tasks').html('');
 
         _.each(taskArray, function(task, index) {
@@ -62,13 +63,18 @@ $(document).ready(function(){
   });
 
   $('#tasks').on('click', '.complete-btn', function() {
-      $(this).parent().toggleClass('completed');
+    $(this).closest('.printed-task-container').toggleClass('completed');
   });
 
   $('#tasks').on('click', '.delete-btn', function() {
-      $(this).parent().remove();
+    $(this).closest('.printed-task-container').remove();
   });
 
+  $('#tasks').on('click','.more-btn', function() {
+    $(this).closest('.printed-task-container').toggleClass('expand');
+    $(this).closest('.printed-notes').toggleClass('more');
+    $(this).siblings().toggleClass('drop-down')
+  });
 
 });
 
