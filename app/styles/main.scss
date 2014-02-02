@@ -265,10 +265,6 @@ body * {
   }
 }
 
-.task-name {
-  font-size: 30px;
-}
-
 .side-right,
 .side-left {
   display: inline-block;
@@ -296,7 +292,13 @@ margin-left: 50px;
   margin: 0;
 }
 
-.task-name,
+.task-name p span {
+  width: 285px;
+  overflow: hidden;
+  font-size: 30px;
+  line-height: 28px;
+}
+
 .printed-notes {
   width: 285px;
   overflow: hidden;
@@ -318,7 +320,6 @@ margin-left: 50px;
   }
 }
 
-.task-name p,
 .task-date p,
 .printed-notes p {
   margin: 0;
@@ -330,10 +331,11 @@ margin-left: 50px;
   display: inline;
 }
 
-.task-name p span,
 .printed-notes p:nth-child(2){
   font-size: 14px;
   line-height: 28px;
+  display: inline;
+  margin: 0;
 }
 
 .more-btn{
